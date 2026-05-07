@@ -13,7 +13,7 @@ const uiCamera = document.querySelector("#ui-camera");
 const uiScanning = document.querySelector("#ui-scanning");
 const uiDetected = document.querySelector("#ui-detected");
 
-const eatSound = new Audio('../Assets/eat.mp3');
+const eatSound = new Audio('../Assets/brillo.mp3');
 
 uiLoading.style.display = "block";
 uiCamera.style.display = "none";
