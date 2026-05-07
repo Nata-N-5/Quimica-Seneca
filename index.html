@@ -1,118 +1,67 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindAR Local Test</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
 
-<title>Zona de pruebas MindAR</title>
+    <link rel="stylesheet" href="./Styles/Design1.css">
+  </head>
+    <body>
+    <div id="ar-container">
+      <div id="scan-effect"></div>
+    </div>
+<!-- LOADING CENTRADO -->
+<div id="ui-loading">
 
-<link rel="stylesheet" href="./Styles/index.css">
+  <div class="loader"></div>
 
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>🧪 Zona de pruebas MindAR</h1>
-
-<div class="grid">
-
-<div class="card">
-<h2>Prueba Base Original</h2>
-<p class="desc">Escena AR inicial .</p>
-<button onclick="location.href='tests/mainTest1.html'">
-Abrir prueba
-</button>
-</div>
-
-<div class="card">
-<h2>Test Juan Sebastian Rincón Villamil</h2>
-<p class="desc">Experimentos AR de Sebastian.</p>
-<button onclick="location.href='tests/TestVillamil.html'">
-Abrir prueba
-</button>
-</div>
-
-<div class="card">
-<h2>Test Juan Sebastian Chacon</h2>
-<p class="desc">Experimentos AR de Juan.</p>
-<button onclick="location.href='tests/TestChacon.html'">
-Abrir prueba
-</button>
-</div>
-
-<div class="card">
-<h2>Test David Andres Bolaños Segura</h2>
-<p class="desc">Experimentos AR de David.</p>
-<button onclick="location.href='tests/TestDavid.html'">
-Abrir prueba
-</button>
-</div>
-
-<div class="card">
-<h2>Test Sergio Joshua Suarez Pedraza</h2>
-<p class="desc">Experimentos AR de Sergio.</p>
-<button onclick="location.href='tests/TestSuarez.html'">
-Abrir prueba
-</button>
-</div>
-
-<div class="card">
-<h2>Test Juan Sebastian Mendoza</h2>
-<p class="desc">Experimentos AR de Juan.</p>
-<button onclick="location.href='tests/TestMendoza.html'">
-Abrir prueba
-</button>
-</div>
-
-<div class="card">
-<h2>Test Alejandra Maria Acevedo</h2>
-<p class="desc">Experimentos AR de Aleja.</p>
-<button onclick="location.href='tests/TestAleja.html'">
-Abrir prueba
-</button>
-</div>
-
-<div class="card">
-<h2>Test Andres Felipe Clavijo Fajardo</h2>
-<p class="desc">Experimentos AR de Andrés.</p>
-<button onclick="location.href='tests/TestClavijo.html'">
-Abrir prueba
-</button>
-</div>
-
-
-<div class="card">
-<h2>Test Ayelen Rodriguez Candia</h2>
-<p class="desc">Experimentos AR de Ayelen.</p>
-<button onclick="location.href='tests/TestAyelen.html'">
-Abrir prueba
-</button>
-</div>
-
-
-<div class="card">
-<h2>Test Alden Esteban Rengifo </h2>
-<p class="desc">Experimentos AR de Alden.</p>
-<button onclick="location.href='tests/TestAlden.html'">
-Abrir prueba
-</button>
-</div>
-
-
-<div class="card">
-<h2>Test Natalia Noguera </h2>
-<p class="desc">Experimentos AR de Nata.</p>
-<button onclick="location.href='tests/TestNatalia.html'">
-Abrir prueba
-</button>
-</div>
+  <p>Cargando experiencia AR...</p>
+  <span class="loading-hint">Presiona "Iniciar cámara AR" para comenzar</span>
 
 </div>
 
-</div>
+<!-- MENSAJES DE AR -->
+<div id="ar-ui">
+  <!--<button id="btn-change">COMER</button>-->
+  
+  <button id="btn-change"><span>IGUALDAD</span></button>
 
-</body>
+  <div id="ui-camera" class="ar-state" style="display:none;">
+    Por favor permite el acceso a la cámara
+  </div>
+
+  <div id="ui-scanning" class="ar-state" style="display:none;">
+    Busca la imagen objetivo con la cámara
+  </div>
+
+  <div id="ui-detected" class="ar-state" style="display:none;">
+    ¡Target detectado!
+  </div>
+
+  </div>
+
+    <div class="hud">
+ 
+      <section class="panel controls status">
+        <button id="start-ar">Iniciar camara AR</button>
+        <button id="stop-ar">Detener camara AR</button>
+        
+        <p id="status-text">Esperando inicio.</p>
+
+      </section>
+    </div>
+
+    <script type="module" src="./JS/TestNatalia cNICE.js"></script>
+  </body>
+  
 </html>
