@@ -439,7 +439,7 @@ button:disabled {
 /* corazon derecha */
 
 #btn-change::after {
-  content: "💕";
+  content: "💖";
 
   position: absolute;
 
